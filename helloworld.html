@@ -4,9 +4,13 @@
 </head>
 <body>
 <script type="text/javascript" language="javascript" >
-	var name="Abdoulaye diaw"
-	var age= 31
-	alert("Bonjour "+name+" votre age est de "+age+"...")
+    var myvar="global <br>"
+    document.write(myvar)
+	function sayage(){
+	var myvar="local <br>"
+	document.write(myvar)
+    }
+    sayage();
 </script>
 </body>
 </html>
