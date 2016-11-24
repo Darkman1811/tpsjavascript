@@ -3,23 +3,28 @@
 <body >
  <script type="text/javascript">
 
-     var person = new Object();
-   
- /*  document.write(person.prenom +"<br>");
+     function Personne(prenom,nom,age){
+     	this.prenom=prenom;
+     	this.nom=nom;
+     	this.age=age;
+     	this.fullname=function(){
+    	alert(this.prenom+" "+this.nom)
+   }
+     }
+
+   person=new Personne("Abdoulaye","diaw",31);
+   document.write(person.prenom +"<br>");
    document.write(person.nom+"<br>");
    document.write(person.age+"<br>");
-    
-*/
+    person.fullname();
+
    document.write("<br><br>");
 
    person.nom="Diop";
    person.prenom="Yacine";
    person.age=25;
    person.taille="grande";
-   person.fullname=function(){
-   	alert(this.prenom+" "+this.nom)
-   }
-
+   
    document.write(person.prenom +"<br>");
    document.write(person.nom+"<br>");
    document.write(person.age+"<br>");
