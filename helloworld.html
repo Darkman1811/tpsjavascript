@@ -3,8 +3,14 @@
 <body >
  <script type="text/javascript">
  
-     var person = new Object();
+    function Person(prenom,nom,age){
+    	this.prenom=prenom;
+    	this.nom=nom;
+    	this.age=age;
+    };
    
+   person=new Person("Abdoulaye","Diaw",31);
+
    document.write(person.prenom +"<br>");
    document.write(person.nom+"<br>");
    document.write(person.age+"<br>");
