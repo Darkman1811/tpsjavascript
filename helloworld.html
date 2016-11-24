@@ -1,17 +1,16 @@
 <html>
 <head>
+  <script type="text/javascript">
 
+  	function cry(event){
+     alert("hello from "+event)
+  	}
+  </script>
 </head>
-<body>
-<script type="text/javascript" language="javascript" >
- function sayage(name,age){   
-   document.write("Salut "+name+" votre age est de "+age+ "<br>");
-   age=age+1;
-   return age;
- }   
-    result=sayage("Abdoulaye",31);
-    document.write("Dans 1 an votre age sera de "+result);
-   
-</script>
+<body onload="cry('onload')">
+<form>
+	<input type="text" onkeyup="cry('key up')" name="nom"/>
+	<input type="button" onclick="cry('click')" value="click" >
+</form>
 </body>
 </html>
