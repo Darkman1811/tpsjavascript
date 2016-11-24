@@ -1,16 +1,17 @@
 <html>
 <head>
   <script type="text/javascript">
-
-  	function cry(event){
-     alert("hello from "+event)
-  	}
+  var cookies=document.cookie;
+  alert(cookies);
+       function remember(name){
+       	document.cookie="name="+name+;
+       	 
+       }
   </script>
 </head>
-<body onload="cry('onload')">
+<body >
 <form>
-	<input type="text" onkeyup="cry('key up')" name="nom"/>
-	<input type="button" onclick="cry('click')" value="click" >
+	<input type="button" onclick="remember('abdoulaye diaw')" value="click" >
 </form>
 </body>
 </html>
