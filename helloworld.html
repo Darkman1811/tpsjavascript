@@ -1,14 +1,31 @@
 <html>
-<head>
-  <script type="text/javascript">
- 
-       
 
-  </script>
-</head>
 <body >
-<form>
-	<input type="button" onclick="window.print()" value="print" > <br>
-</form>
+ <script type="text/javascript">
+ 
+     var person = {
+     nom:"diaw",
+     prenom:"abdoulaye",
+     age:31,
+   };
+   
+   document.write(person.prenom +"<br>");
+   document.write(person.nom+"<br>");
+   document.write(person.age+"<br>");
+
+   document.write("<br><br><br>");
+
+   person.nom="Diop";
+   person.prenom="Yacine";
+   person.age=25;
+   person.taille="grande";
+
+   document.write(person.prenom +"<br>");
+   document.write(person.nom+"<br>");
+   document.write(person.age+"<br>");
+   document.write(person.taille+"<br>");
+    
+  </script>
+   
 </body>
 </html>
