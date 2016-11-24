@@ -1,17 +1,19 @@
 <html>
 <head>
   <script type="text/javascript">
-  var cookies=document.cookie;
-  alert(cookies);
-       function remember(name){
-       	document.cookie="name="+name+;
-       	 
-       }
+ 
+       function al(){ alert("hello ") }
+       function cf(){ document.write(confirm("confim box "))}
+       function prt(){ document.write(prompt("prompt box "))}
+       
+
   </script>
 </head>
 <body >
 <form>
-	<input type="button" onclick="remember('abdoulaye diaw')" value="click" >
+	<input type="button" onclick="al()" value="alert" > <br>
+	<input type="button" onclick="cf()" value="confirm" > <br>
+	<input type="button" onclick="prt()" value="prompt" > <br>
 </form>
 </body>
 </html>
