@@ -4,18 +4,13 @@
 </head>
 <body>
 <script type="text/javascript" language="javascript" >
-   //Arithemetique operators
-    var myvar=15;
-    document.write(myvar +"<br>");
-    var myvar=myvar+4;
-    document.write(myvar +"<br>");
-    var myvar=myvar-8;
-    document.write(myvar +"<br>");
-    var myvar=myvar*4;
-    document.write(myvar +"<br>");
-    var myvar=myvar/3;
-    
-    
+ function sayage(name,age){   
+   document.write("Salut "+name+" votre age est de "+age+ "<br>");
+   age=age+1;
+   return age;
+ }   
+    result=sayage("Abdoulaye",31);
+    document.write("Dans 1 an votre age sera de "+result);
    
 </script>
 </body>
