@@ -2,20 +2,27 @@
 
 <body >
  <script type="text/javascript">
- 
-    function Person(prenom,nom,age){
-    	this.prenom=prenom;
-    	this.nom=nom;
-    	this.age=age;
-    };
+ /* var person = {
+    firstName:"John",
+    lastName:"Doe",
+    age:50,
+    eyeColor:"blue"
+}; */
+     var person = {
+     nom:"diaw",
+     prenom:"abdoulaye",
+     age:31,
+     fullname:function(){
+     	alert(this.prenom+ " " +this.nom);
+     }
+   };
    
-   person=new Person("Abdoulaye","Diaw",31);
-
    document.write(person.prenom +"<br>");
    document.write(person.nom+"<br>");
    document.write(person.age+"<br>");
+   person.fullname();
 
-   document.write("<br><br><br>");
+   document.write("<br><br>");
 
    person.nom="Diop";
    person.prenom="Yacine";
@@ -26,6 +33,7 @@
    document.write(person.nom+"<br>");
    document.write(person.age+"<br>");
    document.write(person.taille+"<br>");
+   person.fullname();
     
   </script>
    
