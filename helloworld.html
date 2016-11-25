@@ -1,42 +1,53 @@
 <html>
 <head>
  <script type="text/javascript">
-    function patchit(){
-    	//document.getElementById("memo").innerHTML="get rich or die trying";
-    	var arr=document.getElementsByClassName("par");
+ 
+   
+    function patchit(param){
+  	
+    		var i=0;
+    	
+    		window.setInterval(function (){
+    		var ps=document.getElementsByTagName(param);
+    		
+    		console.log("flipit "+i);
+          
 
-    	alert(arr.length);
-    	for(var i=0;i<arr.length;i++){
-    		arr[i].innerHTML="dodo";
-    	}
+            if(i==ps.length){ps[i-1].className="black";i=0;}
+            if(i>0){ps[i-1].className="black";}
+            ps[i].className="red";
+            i++;},1000);
+
     }
+
+    
   </script>
 
   <style type="text/css">
   	.red{
   		color: red;
   	}
-  	.blue{
-  		color: blue;
+  	.black{
+  		color: black;
   	}
   </style>
   </head>
 
 <body >
 
-   <p id="memo" class="par blue"> good peopole dies </p>
-   <p  class="par"> good peopole dies </p>
-   <p  class="red"> good peopole dies </p>
+   <p id="memo" class="par blue"> good peopole dies young </p>
+   <p  class="par"> good peopole dies young </p>
+   <p  class="red"> good peopole dies young </p>
    <ul>
-   	  <li>1</li>
-   	  <li>1</li>
-   	  <li>1</li>
-   	  <li>1</li>
-   	  <li>1</li>
-   	  <li>1</li>
-   	  <li>1</li>
+   	  <li>1 good peopole dies young</li>
+   	  <li>1 good peopole dies young</li>
+   	  <li>1 good peopole dies young</li>
+   	  <li>1 good peopole dies young</li>
+   	  <li>1 good peopole dies young</li>
+   	  <li>1 good peopole dies young</li>
+   	  <li>1 good peopole dies young</li>
    </ul>
 
-   <input type="button" value="click" onclick="patchit();" />
+   <input type="button" value="click" onclick="patchit('li');" />
 </body>
 </html>
