@@ -2,35 +2,27 @@
 
 <body >
  <script type="text/javascript">
-
-     function Personne(prenom,nom,age){
-     	this.prenom=prenom;
-     	this.nom=nom;
-     	this.age=age;
-     	this.fullname=function(){
-    	alert(this.prenom+" "+this.nom)
-   }
-     }
-
-   person=new Personne("Abdoulaye","diaw",31);
-   document.write(person.prenom +"<br>");
-   document.write(person.nom+"<br>");
-   document.write(person.age+"<br>");
-    person.fullname();
-
-   document.write("<br><br>");
-
-   person.nom="Diop";
-   person.prenom="Yacine";
-   person.age=25;
-   person.taille="grande";
-   
-   document.write(person.prenom +"<br>");
-   document.write(person.nom+"<br>");
-   document.write(person.age+"<br>");
-   document.write(person.taille+"<br>");
-   person.fullname();
     
+    str=new String("Yacine va au marche");
+    document.write(str);
+    document.write("<br>");
+    //charAt(5)
+    document.write(str.charAt(5));
+
+    document.write("<br>");
+  
+  //concat
+    document.write(str.concat(" de yoff"))
+    document.write("<br>");
+
+   cookies = document.cookie;
+   document.write(cookies);
+   document.write("------------------------<br>");
+   arr=cookies.split(";");
+   for(var i=0;i<arr.length;i++){
+   	document.write(i+":"+arr[i]+"<br>")
+   }
+
   </script>
    
 </body>
