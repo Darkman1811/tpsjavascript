@@ -6,16 +6,18 @@
     function patchit(param){
   	
     		var i=0;
-    	
-    		window.setInterval(function (){
-    		var ps=document.getElementsByTagName(param);
-    		
-    		console.log("flipit "+i);
-          
+    	    var j=0;
+    	    var ps=document.querySelectorAll("ul#list1>li.blue")
 
-            if(i==ps.length){ps[i-1].className="black";i=0;}
-            if(i>0){ps[i-1].className="black";}
+    		window.setInterval(function (){
+    		//var ps=document.getElementsByTagName(param);
+    		      		console.log("flipit "+i);
+            
+
+            if(i==ps.length){ps[j].className="blue";i=0;}
+            if(j>=0){ps[j].className="blue";}
             ps[i].className="red";
+            j=i;
             i++;},1000);
 
     }
@@ -30,6 +32,10 @@
   	.black{
   		color: black;
   	}
+
+  	.blue{
+  		color: blue;
+  	}
   </style>
   </head>
 
@@ -38,7 +44,26 @@
    <p id="memo" class="par blue"> good peopole dies young </p>
    <p  class="par"> good peopole dies young </p>
    <p  class="red"> good peopole dies young </p>
-   <ul>
+   <ul id="list1">
+   	  <li>1 good peopole dies young</li>
+   	  <li class="blue">1 good peopole dies young</li>
+   	  <li>1 good peopole dies young</li>
+   	  <li class="blue">1 good peopole dies young</li>
+   	  <li>1 good peopole dies young</li>
+   	  <li class="blue">1 good peopole dies young</li>
+   	  <li>1 good peopole dies young</li>
+   	  <li>1 good peopole dies young</li>
+   	  <li class="blue">1 good peopole dies young</li>
+   	  <li>1 good peopole dies young</li>
+   	  <li class="blue">1 good peopole dies young</li>
+   	  <li>1 good peopole dies young</li>
+   	  <li class="blue">1 good peopole dies young</li>
+   	  <li>1 good peopole dies young</li>
+   </ul>
+
+   <input type="button" value="click" onclick="patchit('li');" />
+
+   <ul id="list2">
    	  <li>1 good peopole dies young</li>
    	  <li>1 good peopole dies young</li>
    	  <li>1 good peopole dies young</li>
@@ -48,6 +73,5 @@
    	  <li>1 good peopole dies young</li>
    </ul>
 
-   <input type="button" value="click" onclick="patchit('li');" />
 </body>
 </html>
