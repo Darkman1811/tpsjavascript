@@ -1,29 +1,42 @@
 <html>
+<head>
+ <script type="text/javascript">
+    function patchit(){
+    	//document.getElementById("memo").innerHTML="get rich or die trying";
+    	var arr=document.getElementsByClassName("par");
+
+    	alert(arr.length);
+    	for(var i=0;i<arr.length;i++){
+    		arr[i].innerHTML="dodo";
+    	}
+    }
+  </script>
+
+  <style type="text/css">
+  	.red{
+  		color: red;
+  	}
+  	.blue{
+  		color: blue;
+  	}
+  </style>
+  </head>
 
 <body >
- <script type="text/javascript">
-    
-    str=new String("Yacine va au marche");
-    document.write(str);
-    document.write("<br>");
-    //charAt(5)
-    document.write(str.charAt(5));
 
-    document.write("<br>");
-  
-  //concat
-    document.write(str.concat(" de yoff"))
-    document.write("<br>");
+   <p id="memo" class="par blue"> good peopole dies </p>
+   <p  class="par"> good peopole dies </p>
+   <p  class="red"> good peopole dies </p>
+   <ul>
+   	  <li>1</li>
+   	  <li>1</li>
+   	  <li>1</li>
+   	  <li>1</li>
+   	  <li>1</li>
+   	  <li>1</li>
+   	  <li>1</li>
+   </ul>
 
-   cookies = document.cookie;
-   document.write(cookies);
-   document.write("------------------------<br>");
-   arr=cookies.split(";");
-   for(var i=0;i<arr.length;i++){
-   	document.write(i+":"+arr[i]+"<br>")
-   }
-
-  </script>
-   
+   <input type="button" value="click" onclick="patchit();" />
 </body>
 </html>
